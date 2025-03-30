@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fotografías</title>
+    <title>Photos</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #85C1AE; /* Fondo verde San Patricio */
+            background-color: #85C1AE; /* St. Patrick's Green Background */
             
             margin: 0;
             padding: 0;
@@ -33,7 +33,7 @@
             max-width: 500px;
             overflow: hidden;
             border-radius: 10px;
-            background-color: white; /* Fondo blanco para el slider */
+            background-color: white; /* White background for the slider */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,11 +54,11 @@
         }
 
         .slide img {
-            max-width: 75%; /* Limita el tamaño máximo al 75% del contenedor */
-            max-height: 75%; /* Limita el tamaño máximo al 75% del contenedor */
-            object-fit: contain; /* Ajusta las imágenes sin deformarlas */
+            max-width: 75%; /* Limits the maximum size to 75% of the container */
+            max-height: 75%; /* Limits the maximum height to 75% of the container */
+            object-fit: contain; /* Adjusts the images without distorting them */
             display: block;
-            margin: 0 auto; /* Centra la imagen */
+            margin: 0 auto; /* Centers the image */
         }
 
         .prev, .next {
@@ -82,7 +82,7 @@
             right: 10px;
         }
 
-        /* Estilo para el botón de regreso */
+        /* Style for the return button */
         button {
             background-color: #4CAF50;
             color: white;
@@ -94,8 +94,8 @@
             transition: background-color 0.3s ease;
             text-align: center;
             margin-top: 20px;
-            align-self: flex-start; /* Mueve el botón a la izquierda */
-            margin-left: 20px; /* Agrega un margen a la izquierda */
+            align-self: flex-start; /* Moves the button to the left */
+            margin-left: 20px; /* Adds a margin to the left */
         }
 
         button a {
@@ -107,7 +107,7 @@
             background-color: #45a049;
         }
 
-        /* Estilo responsivo */
+        /* Responsive styling */
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.5rem;
@@ -117,34 +117,34 @@
 </head>
 <body>
 
-    <h1>Fotografías</h1>
+    <h1>Photos</h1>
 
     <div class="slider-container">
         <div class="slider">
-            <!-- Imágenes -->
-            <div class="slide"><img src="m.jpeg" alt="Imagen 1"></div>
-            <div class="slide"><img src="n.jpeg" alt="Imagen 2"></div>
-            <div class="slide"><img src="b.jpeg" alt="Imagen 3"></div>
-            <div class="slide"><img src="v.jpeg" alt="Imagen 4"></div>
-            <div class="slide"><img src="c.jpeg" alt="Imagen 5"></div>
-            <div class="slide"><img src="x.jpeg" alt="Imagen 6"></div>
-            <div class="slide"><img src="z.jpeg" alt="Imagen 7"></div>
-            <div class="slide"><img src="l.jpeg" alt="Imagen 8"></div>
-            <div class="slide"><img src="k.jpeg" alt="Imagen 9"></div>
-            <div class="slide"><img src="j.jpeg" alt="Imagen 10"></div>
-            <div class="slide"><img src="h.jpeg" alt="Imagen 11"></div>
-            <div class="slide"><img src="f.jpeg" alt="Imagen 12"></div>
-            <div class="slide"><img src="d.jpeg" alt="Imagen 13"></div>
-            <div class="slide"><img src="s.jpeg" alt="Imagen 14"></div>
-            <div class="slide"><img src="a.jpeg" alt="Imagen 15"></div>
+            <!-- Images -->
+            <div class="slide"><img src="m.jpeg" alt="Image 1"></div>
+            <div class="slide"><img src="n.jpeg" alt="Image 2"></div>
+            <div class="slide"><img src="b.jpeg" alt="Image 3"></div>
+            <div class="slide"><img src="v.jpeg" alt="Image 4"></div>
+            <div class="slide"><img src="c.jpeg" alt="Image 5"></div>
+            <div class="slide"><img src="x.jpeg" alt="Image 6"></div>
+            <div class="slide"><img src="z.jpeg" alt="Image 7"></div>
+            <div class="slide"><img src="l.jpeg" alt="Image 8"></div>
+            <div class="slide"><img src="k.jpeg" alt="Image 9"></div>
+            <div class="slide"><img src="j.jpeg" alt="Image 10"></div>
+            <div class="slide"><img src="h.jpeg" alt="Image 11"></div>
+            <div class="slide"><img src="f.jpeg" alt="Image 12"></div>
+            <div class="slide"><img src="d.jpeg" alt="Image 13"></div>
+            <div class="slide"><img src="s.jpeg" alt="Image 14"></div>
+            <div class="slide"><img src="a.jpeg" alt="Image 15"></div>
         </div>
         
-        <!-- Botones de navegación -->
+        <!-- Navigation buttons -->
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
     </div>
 
-    <button><a href="todo.html">Regresar</a></button>
+    <button><a href="todo.html">Back</a></button>
 
     <script>
         let currentIndex = 0;
