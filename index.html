@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visita Cultural - San Patricio</title>
+    <title>Cultural Visit - St. Patrick's Day</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
         }
+
         .header {
             background: rgba(34, 139, 34, 0.8);
             padding: 20px;
@@ -20,13 +21,16 @@
             font-weight: bold;
             text-shadow: 2px 2px 4px black;
         }
+
         .container {
             padding: 40px;
             background: rgba(0, 0, 0, 0.5);
             margin: 20px auto;
             width: 80%;
             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
         }
+
         .btn {
             display: inline-block;
             padding: 12px 25px;
@@ -36,32 +40,57 @@
             font-weight: bold;
             font-size: 18px;
             border-radius: 5px;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
+
         .btn:hover {
             background-color: #FFA500;
+            transform: scale(1.05);
         }
+
         .trebol {
             width: 250px;
             margin: 20px 0;
             border-radius: 10px;
             box-shadow: 2px 2px 10px black;
         }
+
         .footer {
             margin-top: 30px;
             font-size: 16px;
         }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header {
+                font-size: 2em;
+            }
+
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .trebol {
+                width: 200px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header">Visita Cultural sobre San Patricio</div>
+    <div class="header">Cultural Visit on St. Patrick's Day</div>
     <div class="container">
-        <p>Únete a la celebración del Día de San Patricio con nosotros. Disfruta de la cultura, la música y la diversión.</p>
-        <img src="1.jpeg" alt="Trébol" class="trebol">
+        <p>Join us in celebrating St. Patrick's Day. Enjoy the culture, music, and fun!</p>
+        <img src="1.jpeg" alt="Clover" class="trebol">
         <br>
-        <a href="todo.html" class="btn">Ver más</a>
+        <a href="todo.html" class="btn">Learn More</a>
         <div class="footer">
-            
+            <!-- Add footer content here if necessary -->
         </div>
     </div>
 </body>
