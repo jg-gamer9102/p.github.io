@@ -1,0 +1,35 @@
+.m1{
+    background-image: url(imagenes/jg.jpg);
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: blueviolet;
+    padding: 500px;
+}
+   
+.m4{
+    width: 300px;
+    height: 300px;
+}
+.m4{
+   background-repeat: no-repeat;
+}
+.m2{
+    text-align: center;
+    
+}
+.m5{
+  
+  padding-left: 0;
+
+}
+.m6{
+    padding-right: 150px;   
+}
+.n1{
+    text-align: center;
+   
+}
+.m8{
+    color: rgb(64, 71, 64);
+}

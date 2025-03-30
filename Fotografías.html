@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fotografías</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #85C1AE; /* Fondo verde San Patricio */
+            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: white; /* Fondo blanco para el slider */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .slide img {
+            max-width: 75%; /* Limita el tamaño máximo al 75% del contenedor */
+            max-height: 75%; /* Limita el tamaño máximo al 75% del contenedor */
+            object-fit: contain; /* Ajusta las imágenes sin deformarlas */
+            display: block;
+            margin: 0 auto; /* Centra la imagen */
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Estilo para el botón de regreso */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+            align-self: flex-start; /* Mueve el botón a la izquierda */
+            margin-left: 20px; /* Agrega un margen a la izquierda */
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fotografías</h1>
+
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Imágenes -->
+            <div class="slide"><img src="imagenes/m.jpeg" alt="Imagen 1"></div>
+            <div class="slide"><img src="imagenes/n.jpeg" alt="Imagen 2"></div>
+            <div class="slide"><img src="imagenes/b.jpeg" alt="Imagen 3"></div>
+            <div class="slide"><img src="imagenes/v.jpeg" alt="Imagen 4"></div>
+            <div class="slide"><img src="imagenes/c.jpeg" alt="Imagen 5"></div>
+            <div class="slide"><img src="imagenes/x.jpeg" alt="Imagen 6"></div>
+            <div class="slide"><img src="imagenes/z.jpeg" alt="Imagen 7"></div>
+            <div class="slide"><img src="imagenes/l.jpeg" alt="Imagen 8"></div>
+            <div class="slide"><img src="imagenes/k.jpeg" alt="Imagen 9"></div>
+            <div class="slide"><img src="imagenes/j.jpeg" alt="Imagen 10"></div>
+            <div class="slide"><img src="imagenes/h.jpeg" alt="Imagen 11"></div>
+            <div class="slide"><img src="imagenes/f.jpeg" alt="Imagen 12"></div>
+            <div class="slide"><img src="imagenes/d.jpeg" alt="Imagen 13"></div>
+            <div class="slide"><img src="imagenes/s.jpeg" alt="Imagen 14"></div>
+            <div class="slide"><img src="imagenes/a.jpeg" alt="Imagen 15"></div>
+        </div>
+        
+        <!-- Botones de navegación -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <button><a href="todo.html">Regresar</a></button>
+
+    <script>
+        let currentIndex = 0;
+
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const slider = document.querySelector('.slider');
+
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+            updateSlider();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        });
+    </script>
+
+</body>
+</html>

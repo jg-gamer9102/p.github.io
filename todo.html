@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="estilos_de_enlaces.css">
+    <link rel="stylesheet" href="d1.css">
+    <link rel="stylesheet" href="estilo_de_boton.css">
+
+    <style>
+        body {
+            background-image: url('imagenes/2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: relative;
+            filter: brightness(60%);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animación de Fade-In */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 40px;
+            animation: slideDown 1s ease-out;
+        }
+
+        /* Animación de deslizamiento para el título */
+        @keyframes slideDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .menu {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Animación para el menú */
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los botones se ajusten en diferentes líneas */
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .menu ul li {
+            display: inline-block;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #1b5e20, #43a047);
+            border-radius: 8px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease-in-out;
+            border: 2px solid transparent;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .menu ul li a:hover {
+            background: linear-gradient(135deg, #ffcc00, #ffeb3b);
+            color: black;
+            transform: scale(1.05);
+            border: 2px solid #ffcc00;
+        }
+
+        .btn-regresar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #d32f2f;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-regresar:hover {
+            background: #ff5252;
+            transform: scale(1.1);
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .menu ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu ul li {
+                margin-bottom: 10px;
+            }
+
+            .menu ul li a {
+                font-size: 14px;
+                padding: 10px 12px;
+                min-width: 120px;
+            }
+
+            .btn-regresar {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenidos a la Página de Presentación</h1>
+    <div class="menu" role="navigation" aria-label="Menú principal">
+        <ul>
+            <li><a href="Datos_de_identificacion.html" aria-label="Ir a Datos de Identificación">Datos de Identificación</a></li>
+            <li><a href="Introducción.html" aria-label="Ir a la Introducción">Introducción</a></li>
+            <li><a href="Desarrollo.html" aria-label="Ir al Desarrollo de Contenido">Desarrollo de Contenido</a></li>
+            <li><a href="Informacion.html" aria-label="Ir a Información Adicional">Información Adicional</a></li>
+            <li><a href="Conclusión.html" aria-label="Ir a la Conclusión">Conclusión</a></li>
+            <li><a href="Fotografías.html" aria-label="Ir a Fotografías">Fotografías</a></li>
+        </ul>
+    </div>  
+
+    <a href="index.html" class="btn-regresar" aria-label="Volver a la página principal">⬅ Regresar</a>   
+</body>
+</html>
+
