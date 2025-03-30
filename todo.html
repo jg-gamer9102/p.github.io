@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="estilos_de_enlaces.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="link_styles.css">
     <link rel="stylesheet" href="d1.css">
-    <link rel="stylesheet" href="estilo_de_boton.css">
+    <link rel="stylesheet" href="button_styles.css">
 
     <style>
         body {
@@ -29,13 +29,13 @@
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* Animación de Fade-In */
+        /* Fade-In Animation */
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
 
-        /* Título principal */
+        /* Main Title */
         h1 {
             font-size: 3rem;
             font-weight: bold;
@@ -46,7 +46,7 @@
             animation: slideDown 1s ease-out;
         }
 
-        /* Animación de deslizamiento para el título */
+        /* Slide-In Animation for Title */
         @keyframes slideDown {
             0% { transform: translateY(-50px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
@@ -60,7 +60,7 @@
             animation: slideIn 1.5s ease-out;
         }
 
-        /* Animación para el menú */
+        /* Slide-In Animation for Menu */
         @keyframes slideIn {
             0% { transform: translateY(-50px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
@@ -70,7 +70,7 @@
             list-style: none;
             padding: 0;
             display: flex;
-            flex-wrap: wrap; /* Permite que los botones se ajusten en diferentes líneas */
+            flex-wrap: wrap; /* Allows buttons to adjust to different lines */
             gap: 15px;
             justify-content: center;
         }
@@ -101,7 +101,7 @@
             border: 2px solid #ffcc00;
         }
 
-        .btn-regresar {
+        .btn-back {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -116,12 +116,12 @@
             transition: 0.3s ease-in-out;
         }
 
-        .btn-regresar:hover {
+        .btn-back:hover {
             background: #ff5252;
             transform: scale(1.1);
         }
 
-        /* Estilos responsivos */
+        /* Responsive styles */
         @media (max-width: 768px) {
             .menu ul {
                 flex-direction: column;
@@ -138,7 +138,7 @@
                 min-width: 120px;
             }
 
-            .btn-regresar {
+            .btn-back {
                 font-size: 14px;
                 padding: 8px 12px;
             }
@@ -150,19 +150,18 @@
     </style>
 </head>
 <body>
-    <h1>Bienvenidos a la Página de Presentación</h1>
-    <div class="menu" role="navigation" aria-label="Menú principal">
+    <h1>Welcome to the Presentation Page</h1>
+    <div class="menu" role="navigation" aria-label="Main Menu">
         <ul>
-            <li><a href="Datos_de_identificacion.html" aria-label="Ir a Datos de Identificación">Datos de Identificación</a></li>
-            <li><a href="Introducción.html" aria-label="Ir a la Introducción">Introducción</a></li>
-            <li><a href="Desarrollo.html" aria-label="Ir al Desarrollo de Contenido">Desarrollo de Contenido</a></li>
-            <li><a href="Informacion.html" aria-label="Ir a Información Adicional">Información Adicional</a></li>
-            <li><a href="Conclusión.html" aria-label="Ir a la Conclusión">Conclusión</a></li>
-            <li><a href="Fotografías.html" aria-label="Ir a Fotografías">Fotografías</a></li>
+            <li><a href="Datos_de_identificacion.html" aria-label="Go to Identification Details">Identification Details</a></li>
+            <li><a href="Introducción.html" aria-label="Go to Introduction">Introduction</a></li>
+            <li><a href="Desarrollo.html" aria-label="Go to Content Development">Content Development</a></li>
+            <li><a href="Informacion.html" aria-label="Go to Additional Information">Additional Information</a></li>
+            <li><a href="Conclusión.html" aria-label="Go to Conclusion">Conclusion</a></li>
+            <li><a href="Fotografías.html" aria-label="Go to Photos">Photos</a></li>
         </ul>
     </div>  
 
-    <a href="index.html" class="btn-regresar" aria-label="Volver a la página principal">⬅ Regresar</a>   
+    <a href="index.html" class="btn-back" aria-label="Back to the main page">⬅ Back</a>   
 </body>
 </html>
-
